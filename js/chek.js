@@ -14,12 +14,13 @@ urlRef.once("value", function(snapshot) {
 
 	candidate.forEach(function (e) {
 		
-
+                var number= Object.keys(e.votes);
+		var number_vote=number.length;
 		html= ' <div class="cont text-center"><div class="item"><div class="content"><img src='+e.imageUrl+' width="200" height="200"><br><p>'
 		+ e.name +'</p><p>' 
 		+ e.faculty + '</p><p>'
 		+ e.country + '</p><p>'
-		+' Vote: 0 </p></div></div></div>'
+		+' Vote: '+number_vote+' </p></div></div></div>'
 
 		
         
