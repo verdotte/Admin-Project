@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nova+Slim|Ubuntu|Rubik|Roboto" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/lib.css">
+<link rel="stylesheet" href="fonts/entypo.css">
+<link rel="stylesheet" type="text/css" href="css/Home.css">
+
+
+</head>
+<body>
+
+<!-- Navbar -->
+   
+
+  <header class="roboto flex justify-between align-center shadow-2">
+
+    <div class="left">
+        Ivote
+    </div>
+
+    <div class="right">
+      <a href="#" onclick="logout()" class="btn btn-default">
+        <i class="icon-logout"></i>
+        Logout
+      </a>
+    </div>
+  </header>
+
+<div class="container-fluid bg-1 text-center">
+
+  <div class="row">
+
+  <div class="col-sm-4">
+    
+    <div class="home">
+    <div class="item">
+    <div class="content">
+      
+      <form action="#" class="form-horizontal">
+        <div class="logo text-center">
+          <h1>Add Registration Number</h1>
+        </div>
+      
+      <div class="input-group lg">
+      <span class="input-group-addon"><i class="icon icon-bookmarks"></i></span>
+        <input type="text" id="reg" class="form-control" placeholder="Registration Number">
+          </div>
+        </form>
+        <div class="form-group in">
+          <button  class=" btn btn-primary btn-block" onclick="adding()">Confirm</button> 
+        </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  
+  <div class="col-sm-4">
+
+  <div class="home">
+  <div class="item">
+    <div class="content">
+      <form action="#" class="form-horizontal">
+        <div class="logo text-center">
+          <h2>Add Candidate</h2>
+          </div>
+
+          <div class="text-center">
+           <img src="s.jpg" width="130" height="130"> 
+           <span class="btn btn-primary btn-file"> <i class="icon-camera"></i>
+           <input type="file" id="image" onchange="previewFile()">
+          </span>
+          </div>
+
+          <div class="lg">
+          
+          </div>
+
+          <div class="input-group lg">
+          <span class="input-group-addon"><i class="icon-user"></i></span>
+          <input type="text" id="name" class="form-control" placeholder="Name">
+          </div>
+          <div class="input-group lg">
+          <span class="input-group-addon"><i class="icon-book"></i></span>
+          <select class="form-control" id="selection" onchange="facSelect()">
+          <option style="display: none;">Faculty</option>
+          <option value="Engineering">Engineering</option>
+          <option value="Business and Management">Business and Management</option>
+          <option value="Law">Law</option>
+          <option value="Science and Technology">Science and Technology</option>
+          </select>
+          </div>
+          <div class="input-group lg">
+          <span class="input-group-addon"><i class="icon-address"></i></span>
+          <input type="text" id="country" class="form-control" placeholder="country">
+          </div>
+          </form>
+          <div class="form-group in">
+          <button  class=" btn btn-primary btn-block" onclick="upload()">Confirm</button> 
+          </div>
+        </div>
+    </div>
+</div>
+    
+
+  </div>
+  
+  <div class="col-sm-4">
+
+    <div class="home">
+  <div class="item">
+    <div class="content">
+      <form action="#" class="form-horizontal" id="myForm">
+        <div class="logo text-center">
+          <h1>Check Result</h1>
+        </div>
+      <div class="input-group lg">
+      <span class="input-group-addon"><i class="icon-user"></i></span>
+          <input type="email" id="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="input-group lg">
+      <span class="input-group-addon"><i class="icon-lock"></i></span>
+          <input type="password" id="password" class="form-control" placeholder="Password">
+          </div>
+          </form>
+          <div class="form-group in">
+          <button  class=" btn btn-primary btn-block" onclick="check()">Check</button> 
+      </div>
+        </div>
+    </div>
+</div>
+    
+
+  </div>
+
+</div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/lib.js"></script>
+<script type="text/javascript" src="js/Home.js"> </script>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyCOgXb3R_Jw4JVdExDhTMO8xxLHNuN3Gs8",
+    authDomain: "andy-c769f.firebaseapp.com",
+    databaseURL: "https://andy-c769f.firebaseio.com",
+    projectId: "andy-c769f",
+    storageBucket: "andy-c769f.appspot.com",
+    messagingSenderId: "506693318248"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script type="text/javascript">
+
+
+  $( document ).ready(function() {
+     firebase.auth().onAuthStateChanged((user) => {
+    
+    if (user == null) {
+       redirect("log.html");
+    } else {
+        //user is still login
+    }
+    
+    });  
+    });
+  
+
+</script> 
+</body>
+</html>

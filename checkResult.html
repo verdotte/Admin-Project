@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<meta charset="utf">
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/lib.css">
+<link rel="stylesheet" type="text/css" href="css/check.css">
+<link href="https://fonts.googleapis.com/css?family=Nova+Slim|Ubuntu|Rubik|Roboto" rel="stylesheet">
+<link rel="stylesheet" href="fonts/entypo.css">
+
+<body onload="lo()">
+
+	<header class="roboto flex justify-between align-center shadow-2" id="header">
+    <div class="left">
+       Result
+    </div>
+
+    <div class="right">
+       <a href="Home.html" class="btn btn-default">
+        <i class="icon-home"></i>
+        Home
+       </a>
+       <a href="#" onclick="logout()" class="btn btn-default">
+       <i class="icon-logout"></i>
+        Logout
+      </a>
+    </div>
+  </header>
+
+
+
+
+  
+ 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/lib.js"></script>
+<script type="text/javascript" src="js/chek.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCOgXb3R_Jw4JVdExDhTMO8xxLHNuN3Gs8",
+    authDomain: "andy-c769f.firebaseapp.com",
+    databaseURL: "https://andy-c769f.firebaseio.com",
+    projectId: "andy-c769f",
+    storageBucket: "andy-c769f.appspot.com",
+    messagingSenderId: "506693318248"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+</body>
+</html>

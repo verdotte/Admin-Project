@@ -1,0 +1,76 @@
+html{
+	height: 100%;
+	width: 100%;
+  background: #fafafa;
+}
+
+body{
+  height: 100vw;
+  width: 100%;
+
+}
+
+  header{
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header div{
+  padding: 20px;
+}
+
+header .left {
+  color: #2196f3;
+  font-weight: bold;
+  padding-left: 20px;
+  font-size: 1.5em;
+  font-family:'Trebuchet MS';
+}
+
+header .right a{
+  padding-right: 30px;
+  color: #2196f3;
+  font-size: .9em;
+  font-family:'Trebuchet MS';
+}
+
+.cont {
+      padding: 20px;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      display: inline;
+      align-items: center;   
+}
+
+.item{
+  margin-top:100px;
+  width: 370px;
+  height: 400px;
+  margin-left: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: inline-block;
+}
+.content{
+  padding:30px; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+
+}
+img{
+  border-radius: 50%;
+  padding: 30px;
+}
+p{
+ font-family:'Rubik', cursive;
+ font-weight: bold;
+ font-size: 15px;
+
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+<meta charset="utf">
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/lib.css">
+<link rel="stylesheet" type="text/css" href="css/log.css">
+<link href="https://fonts.googleapis.com/css?family=Nova+Slim|Ubuntu|Rubik|Roboto" rel="stylesheet">
+
+<link rel="stylesheet" href="fonts/entypo.css">
+
+</head>
+<body>
+<div id="app" class="home">
+	<div class="item">
+		<div class="content">
+			<form action="#" class="form-horizontal">
+				<div class="logo text-center">
+					<h2>Login</h2>
+				</div>
+			<div class="input-group lg">
+			<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+	        <input type="email" id="email" class="form-control" placeholder="Email" v-model:email="auth.email">
+	        </div>
+	        <div class="input-group lg">
+			<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+	        <input type="password" id="password" class="form-control" placeholder="Password" v-model:password="auth.password">
+	        </div>
+		    </form>
+		    <div class="form-group in">
+	        <button  class=" btn btn-primary btn-block" v-on:click="login()"> Login</button>
+			</div>
+		    
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/lib.js"></script>
+<script src="js/vue.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCOgXb3R_Jw4JVdExDhTMO8xxLHNuN3Gs8",
+    authDomain: "andy-c769f.firebaseapp.com",
+    databaseURL: "https://andy-c769f.firebaseio.com",
+    projectId: "andy-c769f",
+    storageBucket: "andy-c769f.appspot.com",
+    messagingSenderId: "506693318248"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+    firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+       redirect("Home.html");
+    } else {
+       // user must login 
+    }
+     });  
+    });
+
+
+ var app = new Vue({
+  el: '#app',
+
+  data: {
+    auth: {
+      email: '',
+      password: ''
+      
+    }
+  },
+
+  methods: {
+
+  	login : function (event) {
+  		var val = this;
+
+  	if (val.auth.email == "") {
+  		error('fill!');
+  		return;
+  	}
+
+  	if (val.auth.password == "") {
+  		error('fill!');
+  		return;
+  	}
+    
+    load();
+
+  	firebase.auth().signInWithEmailAndPassword(val.auth.email, val.auth.password).
+  	then((data) => {
+    
+    redirect("Home.html");
+  	}).
+
+  	catch((err) =>{
+    alert(err);
+    stopLoading();
+  	}); 		
+  }
+ }
+});
+
+
+
+</script>
+
+</body>
+</html>

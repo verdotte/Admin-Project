@@ -1,0 +1,146 @@
+body,html{
+	height: 100%;
+	width: 100%;
+  background: #fafafa;
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+
+  header{
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  position: fixed;
+  z-index: 1000;
+
+}
+
+header div{
+  padding: 10px 15px;
+}
+
+header .left {
+  color: #2196f3;
+  font-weight: bold;
+  padding-left: 20px;
+  font-size: 1.5em;
+  font-family:'Trebuchet MS';
+}
+
+header .right a{
+  padding-right: 30px;
+  color: #2196f3;
+  font-size: .9em;
+  font-family:'Trebuchet MS';
+}
+
+ .bg-1 { 
+      background-color: #f5f5f5; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 40px;
+      height: 51vw;
+  }
+
+  img{
+    border-radius: 50%;
+  }
+
+.home{
+	max-height: 100%;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+.item{
+	width: 500px;
+	height: 500px;
+	margin-top: 80px;
+	background-color: #fff;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.content{
+	height: 100px;
+	padding:30px; 
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.in{
+	padding: 5px;
+}
+.logo h2{
+	font-family:'Trebuchet MS';
+	font-size: 20px;
+	font-weight: 500px;
+	margin-bottom: 30px;
+	color: #2196f3;
+
+}
+
+.logo h1{
+	font-family:'Trebuchet MS';
+	font-size: 40px;
+	font-weight: 500px;
+	margin-bottom: 30px;
+	color: #2196f3;
+
+}
+input[type="password"],
+input[type="text"],
+input[type="email"]{
+	background: 0 0;
+	border: 0;
+	box-shadow: none;
+	border-bottom: 1px solid #afb5c1;
+	border-radius: 0;
+	margin-bottom: 40px;
+	padding:2px;
+	line-height: 90px;
+}
+i{
+	font-size: 20px;
+}
+.lg{
+  padding: 10px;
+}
+.input-group-addon{
+	background: 0 0;
+	border: 0;
+	color: #afb5c1;
+}
+input[type="email"],
+input[type="text"],
+input[type="password"]:focus{
+box-shadow: none !important;
+border-bottom: 1px solid #2196f3;
+}
+
+
+
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+  right: 25px;
+  top: 10px;
+  border-radius: 50%;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 40px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
