@@ -32,4 +32,16 @@ urlRef.once("value", function(snapshot) {
 });
 
 }
+
+function logout() {
+firebase.auth().signOut()
+.then(() => {
+
+ redirect("log.html");
+ 
+}).catch((err) => {
+  error(err);
+});
+ 
+}
 	
