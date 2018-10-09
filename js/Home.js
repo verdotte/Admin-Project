@@ -196,7 +196,7 @@ function check() {
   firebase.auth().signInWithEmailAndPassword(email,password).
 
   then((user)=> {
-    redirect("check.html");
+    redirect("checkResult.html");
   }).
 
   catch((err)=>{
