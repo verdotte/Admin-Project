@@ -7,10 +7,7 @@ urlRef.once("value", function(snapshot) {
   snapshot.forEach(function(child) {
 
   	var obj = child.val();
-
   	var candidate = [obj];
-
-	
 
 	candidate.forEach(function (e) {
 		
@@ -21,9 +18,7 @@ urlRef.once("value", function(snapshot) {
 		+ e.faculty + '</p><p>'
 		+ e.country + '</p><p>'
 		+' Vote: '+number_vote+' </p></div></div></div>'
-
 		
-        
 		$("body").append(html);
 		stopLoading();
 
